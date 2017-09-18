@@ -1,0 +1,40 @@
+<svg
+  width="768" height="768"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <!--
+    Hand-crafted with love <3
+    Source: <https://github.com/speckninja/plural/rings.svg>
+    License: CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/>
+  -->
+
+  <defs>
+    <clipPath id="half">
+      <rect x="0" y="-332" width="198" height="408" />
+    </clipPath>
+
+    <g id="right" clip-path="url(#half)" fill="transparent">
+      <circle cx="0" cy="-128" r="180" stroke="#111" stroke-width="36" />
+      <circle cx="0" cy="-128" r="180" stroke-width="24" />
+    </g>
+
+    <g id="left" transform="scale(-1, 1)">
+      <use xlink:href="#right" />
+    </g>
+  </defs>
+
+  <circle cx="384" cy="384" r="384" fill="#111" />
+
+  <g transform="translate(384 384)">
+    <use xlink:href="#right" stroke="#88e027" />
+    <use xlink:href="#right" stroke="#ff6639" transform="rotate(90)" />
+    <use xlink:href="#right" stroke="#c567ef" transform="rotate(180)" />
+    <use xlink:href="#right" stroke="#46d5ce" transform="rotate(270)" />
+
+    <use xlink:href="#left" stroke="#88e027" />
+    <use xlink:href="#left" stroke="#ff6639" transform="rotate(90)" />
+    <use xlink:href="#left" stroke="#c567ef" transform="rotate(180)" />
+    <use xlink:href="#left" stroke="#46d5ce" transform="rotate(270)" />
+  </g>
+</svg>
