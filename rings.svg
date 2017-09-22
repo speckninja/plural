@@ -11,11 +11,11 @@
 
   <defs>
     <clipPath id="half">
-      <rect x="0" y="-332" width="198" height="408" />
+      <rect x="0" y="-332" width="204" height="408" />
     </clipPath>
 
     <g id="right" clip-path="url(#half)" fill="transparent">
-      <circle cx="0" cy="-128" r="180" stroke="#111" stroke-width="36" />
+      <circle cx="0" cy="-128" r="180" stroke="#111" stroke-width="48" />
       <circle cx="0" cy="-128" r="180" stroke-width="24" />
     </g>
 
