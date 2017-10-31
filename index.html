@@ -1,0 +1,65 @@
+<!doctype html>
+
+<svg
+  width="768" height="768"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <!--
+    Hand-crafted with love <3
+    Source: <https://github.com/speckninja/plural/rings.svg>
+    License: CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/>
+  -->
+
+  <defs>
+    <clipPath id="half">
+      <rect x="0" y="-332" width="204" height="408" />
+    </clipPath>
+
+    <g id="right" clip-path="url(#half)" fill="transparent">
+      <circle cx="0" cy="-128" r="180" stroke="#111" stroke-width="32" />
+      <circle cx="0" cy="-128" r="180" stroke-width="16" />
+    </g>
+
+    <g id="left" transform="rotate(180, 0, -128)">
+      <use xlink:href="#right" />
+    </g>
+  </defs>
+
+  <circle cx="384" cy="384" r="384" fill="#111" />
+
+  <g transform="translate(384 384)" id="rings-rh"></g>
+  <g transform="translate(384 384)" id="rings-lh"></g>
+</svg>
+
+<script>
+  let ringsRH = document.querySelector('#rings-rh');
+  let ringsLH = document.querySelector('#rings-lh');
+
+  function addRing(color) {
+    ringsRH.innerHTML += `<use xlink:href="#right" stroke="${color}" />`;
+    ringsLH.innerHTML += `<use xlink:href="#left" stroke="${color}" />`;
+
+    updateRingRotations();
+  }
+
+  function removeRing(index) {
+  }
+
+  function updateRing(index, color) {
+  }
+
+  function updateRingRotations() {
+    let rotation = 360 / ringsLH.children.length;
+
+    for (let i = 0; i < ringsLH.children.length; i++) {
+      ringsLH.children[i].setAttribute('transform', `rotate(${rotation * i})`);
+      ringsRH.children[i].setAttribute('transform', `rotate(${rotation * i})`);
+    }
+  }
+
+  addRing('#88e027');
+  addRing('#ff6639');
+  addRing('#c567ef');
+  addRing('#46d5ce');
+</script>
